@@ -1,0 +1,27 @@
+
+api:
+  security:
+    token:
+      secret: 2e86c04c-b848-4ad3-a61e-8bed84c4a2d5
+spring:
+  application:
+    name: grimorium-auth
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth-login
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  packagesToScan: com.murilonerdx.springsecuritytemplate.controller
+  swagger-ui:
+    path: /docs-auth.html
+  api-docs:
+    path: /docs-auth
